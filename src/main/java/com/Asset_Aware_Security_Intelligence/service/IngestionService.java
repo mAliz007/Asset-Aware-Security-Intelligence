@@ -17,7 +17,7 @@ import java.util.*;
 public class IngestionService {
 
     private final AdvisoryRepository advisoryRepository;
-    private final com.AssetAwareSecurityIntelligence.service.NormalizationService normalizationService;
+    private final com.Asset_Aware_Security_Intelligence.service.NormalizationService normalizationService;
     private final RestTemplate restTemplate = new RestTemplate();
     private final ObjectMapper mapper = new ObjectMapper();
 

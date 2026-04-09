@@ -1,4 +1,4 @@
-package com.AssetAwareSecurityIntelligence.service;
+package com.Asset_Aware_Security_Intelligence.service;
 
 import org.springframework.stereotype.Service;
 import java.util.stream.Collectors;
