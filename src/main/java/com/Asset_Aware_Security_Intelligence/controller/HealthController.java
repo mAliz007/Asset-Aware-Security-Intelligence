@@ -1,4 +1,4 @@
-package com.Asset_Aware_Security_Intelligence.Controller;
+package com.Asset_Aware_Security_Intelligence.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

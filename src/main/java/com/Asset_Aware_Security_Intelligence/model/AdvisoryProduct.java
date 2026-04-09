@@ -4,7 +4,11 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "advisory_products")
+@Table(name = "advisory_products", indexes = {
+        @Index(name = "idx_canonical_name", columnList = "canonicalName"),
+        @Index(name = "idx_version_start_padded", columnList = "versionStartPadded"),
+        @Index(name = "idx_version_end_padded", columnList = "versionEndPadded")
+})
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class AdvisoryProduct {
     @Id
@@ -14,22 +18,18 @@ public class AdvisoryProduct {
     private String vendor;
     private String productName;
 
-    // The "Clean Name" for high-speed matching (e.g., "siemenss71500")
-    @Column(index = true)
+    // Remove (index = true) from here
     private String canonicalName;
 
-    private String cpe; // Standardized string if available
+    private String cpe;
 
-    // Version Boundaries (Human Readable)
     private String versionStart;
     private String versionEnd;
 
-    // Version Boundaries (Padded for Math/SQL Comparison)
-    // Example: 00001.00010.00000.00000
-    @Column(index = true)
+    // Remove (index = true) from here
     private String versionStartPadded;
 
-    @Column(index = true)
+    // Remove (index = true) from here
     private String versionEndPadded;
 
     @ManyToOne
