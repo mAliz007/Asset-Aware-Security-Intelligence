@@ -1,4 +1,4 @@
-package com.Asset_Aware_Security_Intelligence.Asset_Aware.Security.Intelligence;
+package com.Asset_Aware_Security_Intelligence;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
