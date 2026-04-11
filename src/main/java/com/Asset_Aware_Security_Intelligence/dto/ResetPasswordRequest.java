@@ -1,0 +1,10 @@
+package com.Asset_Aware_Security_Intelligence.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class ResetPasswordRequest {
+    private String token;
+    private String newPassword;
+}
